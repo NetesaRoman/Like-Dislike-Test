@@ -29,13 +29,9 @@ public class Post {
     @Column
     private String name;
 
-    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "likedPosts")
-    private Set<User> likedUsers = new HashSet<>();
 
-    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "dislikedPosts")
-    private Set<User> dislikedUsers = new HashSet<>();
-
-
+    @OneToMany(mappedBy = "post")
+    Set<PostRating> ratings;
 
 
 }

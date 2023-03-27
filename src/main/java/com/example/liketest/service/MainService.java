@@ -24,20 +24,7 @@ public class MainService {
 
     private final UserRepository userRepository;
 
-    public User like(User user, Post post){
-        user.addLikedPost(post);
-        user.removeDislikedPost(post);
 
-        postRepository.save(post);
-        return  userRepository.save(user);
-    }
-
-    public void dislike(User user, Post post){
-        user.addDislikedPost(post);
-        user.removeLikedPost(post);
-        userRepository.save(user);
-        postRepository.save(post);
-    }
 
     public User addUser(User user){
         return userRepository.save(user);

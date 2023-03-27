@@ -25,11 +25,6 @@ public class LikeTestApplication {
     public void started(){
 
 
-
-        log.info(String.valueOf(mainService.like(mainService.getUserById(1), mainService.getPostById(2)).getLikedPosts().size()));
-
-
-
     }
 
 }
