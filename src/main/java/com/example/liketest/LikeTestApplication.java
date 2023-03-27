@@ -23,8 +23,9 @@ public class LikeTestApplication {
 
     @EventListener(ApplicationReadyEvent.class)
     public void started(){
-
-
+        User user = mainService.getUserById(1);
+        Post post = mainService.getPostById(2);
+        mainService.newRating(user, post);
     }
 
 }

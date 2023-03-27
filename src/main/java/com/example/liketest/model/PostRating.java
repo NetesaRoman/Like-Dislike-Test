@@ -2,6 +2,10 @@ package com.example.liketest.model;
 
 import com.example.liketest.model.keys.PostRatingKey;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 /*
  *
@@ -10,6 +14,10 @@ import jakarta.persistence.*;
  */
 @Entity
 @Table(schema = "like_test", name = "post_rating")
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class PostRating {
 
     @EmbeddedId
